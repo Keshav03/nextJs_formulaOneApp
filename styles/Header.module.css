@@ -1,0 +1,42 @@
+.container{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;          
+    align-items: center;
+    width:100vw;
+    height:25vh;
+    overflow-x: hidden;
+    background:red;
+    padding-bottom:50px;
+    overflow-x:hidden;
+  }
+
+  #headerLogo{
+      position: relative;
+      width: 10%;
+      height:200px;
+      cursor:pointer;
+  }
+
+  .links{
+      text-decoration:none;
+      width:80%; 
+      height:20%;
+      display:flex;
+      justify-content:space-evenly;
+      color:white;
+      align-items: center; 
+  }
+
+  .link{
+      text-decoration:none;
+      color:white;
+      text-transform:uppercase;
+      letter-spacing:3px;
+      padding:10px 25px;
+      border-bottom:1px solid rgba(0, 0, 0, 0);
+  }
+  .link:hover{
+      color:yellow;
+      border-bottom:1px solid yellow;
+  }
