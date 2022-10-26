@@ -19,19 +19,14 @@ import { useRouter} from 'next/router';
 //   }
 // }
 
-
-
-
-
-
 // STATIC SIDE RENDERING
-export async function getStaticProps({params}) {
-    let response = await fetch(`http://ergast.com/api/f1/drivers/${params.driverId}.json`)
-    let data = await response.json()
-    return {
-      props:{ driver: data.MRData.DriverTable.Drivers[0] }// will be passed to the page component as props
-    }
-}
+// export async function getStaticProps({params}) {
+//     let response = await fetch(`http://ergast.com/api/f1/drivers/${params.driverId}.json`)
+//     let data = await response.json()
+//     return {
+//       props:{ driver: data.MRData.DriverTable.Drivers[0] }// will be passed to the page component as props
+//     }
+// }
 
 export default function DriverDetails({driver}) {
 
@@ -59,13 +54,13 @@ export default function DriverDetails({driver}) {
       <div>
         <Link href="..">Back to Main Homepage</Link>
         <hr></hr>
-        <p>{driverId}</p>
+        {/* <p>{driverId}</p>
         <div>
             <h2>Name: {driver1.givenName} {driver1.familyName} </h2>
             <h2> Driver's Number : {driver1.permanentNumber} </h2>
             <h2>Date of Birth : {driver1.dateOfBirth}</h2>
-            <h2>Nationality: {driver1.nationality} </h2>
-        </div>
+            <h2>Nationality: {driver1.nationality} </h2> */}
+        {/* </div> */}
 
       </div> 
     );
