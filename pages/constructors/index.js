@@ -12,7 +12,7 @@ export default function Constructor() {
     
     useEffect( () => {
       async function  getF1Constructor(){
-        let response = await fetch(`http://ergast.com/api/f1/2022/constructors.json`)
+        let response = await fetch(`https://ergast.com/api/f1/2022/constructors.json`)
         let data = await response.json()
         setConstructorsList(data.MRData.ConstructorTable.Constructors)
       }
