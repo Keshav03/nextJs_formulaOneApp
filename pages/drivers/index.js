@@ -18,7 +18,7 @@ import Header from "../components/Header"
 
 //STATIC SIDE RENDERING
 export async function getServerSideProps() {
-  let response = await fetch("http://ergast.com/api/f1/2022/drivers.json")
+  let response = await fetch("https://ergast.com/api/f1/2022/drivers.json")
     let data = await response.json()
     return {
       props:{ drivers: data.MRData.DriverTable.Drivers }// will be passed to the page component as props
@@ -42,9 +42,6 @@ export default function Home({drivers}) {
     }
     setYears(generateArrayOfYears());
   }, [])
-
-  
-  
 
   // CLIENT SIDE RENDERING
   // useEffect( () => {
@@ -79,16 +76,7 @@ export default function Home({drivers}) {
         </div>
       </main>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
-        </a>
-      </footer>
+  
 
       <style jsx>{`
         
