@@ -44,7 +44,7 @@ export default function Driver({drivers}) {
     
     useEffect( () => {
       async function  getF1Driver(){
-        let response = await fetch(`http://ergast.com/api/f1/${year}/drivers.json`)
+        let response = await fetch(`https://ergast.com/api/f1/${year}/drivers.json`)
         let data = await response.json()
         setDriversList(data.MRData.DriverTable.Drivers)
       }
